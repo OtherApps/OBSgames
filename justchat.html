@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8" />
+     <head>
+        <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+	
+	  <link href="styles2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+<style>
+.sp{
+font-size:25px;
+
+font-family: 'Righteous', cursive;
+text-transform:uppercase;
+left:50%;
+padding:10px; 
+top:50%;
+font-size:40px; 
+background-color:white;
+color:red;
+position:fixed;
+display:none;
+
+}
+Button {
+  background: #c1d72e;
+  border-radius: 5px;
+  border: solid 1px white;
+  color: black;
+  width: 25px;
+  height: 30px;
+  margin: 0 10px 10px 0;
+  outline: none;
+
+  
+}
+Button:hover {
+  transition: 0.5s;
+  background: white;
+  border: solid 1px white;
+  color: #c1d72e;
+}
+
+.selected {
+  background: white;
+  border: solid 1px white;
+  color: #c1d72e;
+}
+
+
+.special{
+
+
+	overflow:hidden;
+	wrap:auto;
+	width:70%;
+	padding-bottom :20px;
+
+
+  /* Center vertically and horizontally */
+	position: absolute;
+	top:10px;
+	left:0px;
+	margin: -25px 0 0 -25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding:20px;
+	color:white;
+	font-size:24px;
+background-color:white;
+
+
+	
+  }
+ .guestList{
+	color:white;
+	font-family: 'Abril Fatface', cursive;
+	font-family: 'DynaPuff', cursive;
+  }
+.info{
+top:0;
+right:15px;
+padding:100px;
+border-radius: 25px;
+float:right;
+position: fixed;
+background-color:white;
+color:black;
+width:150px;
+height:150px;
+text-align:center;
+font-family: 'Josefin Sans', sans-serif;
+font-weight: bolder;
+display:none;
+
+}
+
+
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: black green;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 20px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 10px solid  green;
+}
+body{
+ scrollbar-color: black green;   /* scroll thumb and track */ 
+ background-color:black;
+ 
+}
+.msg{
+
+	float:center;
+	display: block;
+	color:black;
+	word-wrap: normal;
+	padding:10px;
+	border: 2px solid green;
+	border-radius: 5px;
+	width:90%;
+	padding-top:10px;
+
+}
+.superMsg{
+	display: block;
+	color:red;
+	font-weight:bolder;
+	border: 2px solid black;
+	border-radius: 5px;
+
+}
+.spots{
+
+
+	padding:20px;
+	font-size:50px;
+	left:0;
+	top:75%
+	;position:absolute;
+	text-align:center;font-family: 'Josefin Sans', sans-serif;text-transform:uppercase;font-weight:bolder;
+	border-style: solid;
+	border-color:white;
+	border-radius:24px;
+	box-shadow: 5px 7px 5px 7px white;
+	text-shadow: 2px 2px white;
+
+	background-color:white;
+}
+.chat
+{
+	position:absolute;
+	background-color:gray;
+	color:white;
+	padding-left:100px;
+	overflow-y:scroll;
+	width:50%;height:55%; 
+	font-size:30px;
+	overflow-x:hidden;
+	font-weight: bolder;
+	overflow-anchor: bottom;
+	border: 10px solid black;
+	border-radius: 5px;
+	padding-right:100px;
+	top:150px;
+
+
+};
+.imground{
+
+  border-radius: 50%;
+
+}
+
+.gifts{
+color:red;
+float:center; 
+
+}
+.info2{
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: bolder;
+	font-size:25px;
+	top:300px;
+	left:30px;
+
+}
+  input,button{
+  font-size:20px;
+  color:white;
+  width:200px;
+  float:center;
+  
+  border-radius: 12px;
+  background-color:green;
+  text-align:center;
+  
+}
+  
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+img{
+	border-radius: 4px;
+	width:100px;
+	height:100px;
+
+}
+#myBtn:hover {
+	background-color: #555;
+	
+	}
+.chatwindow{
+  display:none;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  
+  .introWindows{
+  position:fixed;
+  
+  padding-top:10px;
+  color:white;;
+
+	left:50%;
+	top:50%;
+
+	width:300px;
+
+  border: 1px solid;
+
+  box-shadow: 5px 10px green;
+  border-radius: 4px;
+  }
+  .img2{
+  width:100px;
+  height:100px;
+  border-radius: 4px;
+  }
+  
+  .timercountdown{
+      /* text-align: center; */
+    border: 5px solid #004853;
+    display:inline;
+    padding: 5px;
+    color: white;
+    font-family: Verdana, sans-serif, Arial;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+	
+  }
+</style>
+
+<script src="https://js.pusher.com/2.2/pusher.min.js"> </script> 
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+ <script>
+var questions=['-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',];
+var correctAnswer=['-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',];
+var questionValue=['-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-',];
+
+var first = [1,6,11,16,21];
+var second = [2,7,12,17,22];
+var third =[3,8,13,18,23];
+var fourth = [4,9,14,19,24]; 
+var fifth = [5,10,15,20,25];
+
+async function getQuestions(cat,id){
+	
+	
+	var getCatQuestions ="https://jeopardy-game-api.herokuapp.com/clues/categories/"+encodeURI(cat) ; 
+    let response = await fetch(getCatQuestions);
+    
+	if (response.status === 200) {
+        let data = await response.text();
+	  return data;
+	  
+    }
+}
+
+ getQuestions("ZODIAC SYMBOLS",1).then((a) => {
+cat1 = a;
+	var stuff=JSON.parse(a);
+	
+	stuff = stuff.sort(sortByProperty('value'))
+	
+	var i =0;
+	var y=1*4 ;
+	
+	//console.log(stuff2);
+	
+	while(i < stuff.length){
+	
+	
+	questions[first[i]] = stuff[i].question;
+	correctAnswer[first[i]] = stuff[i].answer;
+	questionValue[first[i]] = stuff[i].value; 
+	i++;
+	
+	}
+	//console.log(a);
+	
+});
+async function getQuestions(cat,id){
+	
+	
+	var getCatQuestions ="https://jeopardy-game-api.herokuapp.com/clues/categories/"+encodeURI(cat) ; 
+    let response = await fetch(getCatQuestions);
+    
+	if (response.status === 200) {
+        let data = await response.text();
+	  return data;
+	  
+    }
+}
+
+ getQuestions("ROCK ME",1).then((a) => {
+cat1 = a;
+	var stuff=JSON.parse(a);
+		stuff = stuff.sort(sortByProperty('value'))
+	var i =0;
+	var y=1*4 ;
+	while(i < stuff.length){
+	
+	
+	questions[second[i]] = stuff[i].question;
+	correctAnswer[second[i]] = stuff[i].answer;
+	questionValue[second[i]] = stuff[i].value; 
+	i++;
+	
+	}
+
+	
+});
+
+
+
+ getQuestions("THE MUSICAL DR. IS IN",1).then((a) => {
+cat1 = a;
+	var stuff=JSON.parse(a);
+		stuff = stuff.sort(sortByProperty('value'))
+	var i =0;
+	var y=1*4 ;
+	while(i < stuff.length){
+	
+	
+	questions[third[i]] = stuff[i].question;
+	correctAnswer[third[i]] = stuff[i].answer;
+	questionValue[third[i]] = stuff[i].value; 
+	i++;
+	
+	}
+});
+
+ getQuestions("ZOO LAND",1).then((a) => {
+cat1 = a;
+	var stuff=JSON.parse(a);
+		stuff = stuff.sort(sortByProperty('value'))
+	var i =0;
+	var y=1*4 ;
+	while(i < stuff.length){
+	
+	
+	questions[fourth[i]] = stuff[i].question;
+	correctAnswer[fourth[i]] = stuff[i].answer;
+	questionValue[fourth[i]] = stuff[i].value; 
+	i++;
+	
+	}
+	
+});
+
+ getQuestions("ZOOLOGY",1).then((a) => {
+cat1 = a;
+	var stuff=JSON.parse(a);
+		stuff2 = stuff.sort(sortByProperty('value'))
+	var i =0;
+	var y=1*4 ;
+	while(i < stuff.length){
+	
+	
+	questions[fifth[i]] = stuff[i].question;
+	correctAnswer[fifth[i]] = stuff[i].answer;
+	questionValue[fifth[i]] = stuff[i].value; 
+	i++;
+	
+	}
+	
+});
+</script>
+	
+	
+
+</head>
+
+
+<body id="main" > 
+	<script src="./jep.js"></script>
+	
+
+<div class="container" style="background-color:transparent;left:30%;top:50%;z-index:1" >
+      <div id="card" class="card" style="color:white;background-color:black;"></div>
+
+</div>
+
+
+
+<div id="spots" class="spots"> </div>
+	
+		<script src="script.js"></script>
+		
+		
+		<script src="spot.js">	</script>
+	<script src="yn.js"></script>
+<!-- 
+Thanks to  Jen, Wonk_wifi and Layliee  and mark_c and Lindalu 
+
+//--> 
+    
+	
+
+    <!-- Script -->
+  
+	<div id="infoWin"  class="sp" style="color:green;" >
+		special windows 
+
+	</div>
+
+
+<div  id ="startWindow" class="introWindows">
+<center>
+<button onclick=displayStickers();  style="height:100px;height:40px" >Display Stickers</button>
+<button onclick="" style="height:100px;height:40px" >Play Audio</button>
+
+<br>
+<button onclick="init();" style="height:100px;height:40px" >Hangman</button>
+
+<button onclick='createGame(questionValue);'>Load questions </button>
+<br>
+<button onclick="startSpot()" style="height:100px;height:40px" >Spotify</button>
+
+<h2>Please type in user id</h2>
+<br>
+<input type="text" id="userInputId" value=2282276  />
+<br>
+<button onclick="displayChat();" >Sign in </button>
+
+
+<br>
+
+</center>
+
+
+</div>
+<script>
+
+
+function displayPopUp(data){
+
+	var popup = document.getElementById('cardlist');
+	popup.style.visibility="visible" 
+	popup.innerHTML	= data; 
+		setTimeout(() => {
+  // 👇️ hides element (still takes up space on page)
+	popup.style.visibility = 'hidden';
+	
+	}, 14500);
+	
+}
+var totalLikes =0; 
+var stickers = true; 
+
+
+function displayStickers(){
+
+	stickers = !stickers
+	if(stickers!=true){
+	alert("stickers are off"); 
+	}
+	else{
+	alert("stickers are On"); 
+	}
+	}
+
+function displayChat(){
+
+	var inputId= document.getElementById("userInputId").value;
+	var chatWin = document.getElementById("chatWindow");
+	var startWin = document.getElementById("startWindow");
+	var listcard = document.getElementById("cardlist");
+	
+		if(inputId >0){
+
+	//
+
+	
+		chatWin.style.display = 'block'; 
+		startWin.style.display='none';
+
+		FetchEvent(inputId);
+
+
+		}
+
+}
+
+</script> 
+<div class="chatwindow" id="chatWindow">
+  <div id="chat" class="chat" style="color:green;">
+<script>
+
+var OnorOff= false; 
+
+function goDown(){
+		
+
+		if(OnorOff !=true){
+		window.setInterval(function() {
+		var elem = document.getElementById('chat');
+		elem.scrollTop = elem.scrollHeight;
+		}, 5000);
+
+		OnorOff= true; 
+
+						}
+		else{
+
+	OnorOff = false; 
+	alert("off");
+
+			}
+}
+
+
+</script>
+	</div>  
+	
+    <script>
+
+
+function  saveRandom(username){
+const box = document.getElementById('card');
+
+console.log("here");
+
+	var RandomCardId =getPokeData(); 
+	var url = "http://localhost:8080/save?username=" + username + "&cardId="+ RandomCardId;
+
+	fetch(url)
+	.then(res => res.text())
+    .then(res => console.log(res))
+    .catch(err => console.error(err));
+	
+	setTimeout(() => {
+  
+
+  // 👇️ hides element (still takes up space on page)
+
+  box.style.visibility = 'hidden';
+}, 15500);
+	
+}
+
+
+
+
+
+function cleanUp(dirtytext){
+
+var i =0; 
+
+let text = dirtytext;
+let cleanText = text.replace(/innocent|covid|virus|overweight|ugly|facebook|feet/gi, "**** "); 
+
+
+
+
+return cleanText;
+
+}
+
+
+
+
+
+
+
+
+
+</script> <button onclick="gotoTop()" id="myBtn" title="Go to top">Top</button>
+
+   <script>
+
+function gotoTop()
+{
+	var el3 =   document.getElementById("chat") ;
+	el3.scrollTop =0; 
+
+}
+
+var mybutton = document.getElementById("myBtn");
+var el3 =   document.getElementById("chat") ;
+
+el3.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (el3.scrollTop>2 ) {
+			mybutton.style.display = "block";
+		} else {
+			mybutton.style.display = "none";
+  }
+}
+
+</script>
+<br/>
+
+<button onclick="goDown();" style='align:left;'>AutoScroll (On/Off)</button>
+
+<script>
+ 
+
+
+
+
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+
+
+
+	async function getUserIds(username)
+	{
+
+    targetUrl = 'http://locahost:8080/GetUserId?username='+username;
+    var json = fetch (targetUrl)
+        .then (blob => blob.json ())
+        .then (data =>
+        {
+            json = JSON.stringify (data, null, 2);
+            jsonId = JSON.parse (json);
+			return jsonId.userId;
+			
+        });
+	}
+	
+
+	
+	
+
+
+//searchForSong("to all the boys I've loved before");
+
+</script> 
+
+
+
+</div>
+<div id="countDown" style="right:0;text-align:right;font-size:40px;">
+
+</div>
+<div id="info" class="info">
+
+</div> 
+
+
+<div id="cardlist" style='top:50px;left:50px;border-radius: 26px;color:white;background-color:white;font-size:40px;' class='special'> 
+</div>
+	 <div id="info2" class='info2' style="color:white;">Total fan count here <script> 
+	
+
+ var id = 49506033
+
+
+
+
+
+
+</script>
+	</div>
+	
+<div id="guestList" class="guestList">Guest here </div>
+
+
+		<script link="hangman.js"></script>
+<div style="position:absolute;right:20px;color:white; top:10%;padding:20px; width:500px; ;font-size:30px ;border: white solid 5px;border-style:inline; padding:20px; item-align:center;display:none;" id='hangmanDiv'>
+    <div class="wrapper" >
+
+      <div class="alphabetButton" id="alphabetButtons"></div>
+      <p id="categoryName"></p>
+      <div id="hold"></div>
+      <p id="mylives"></p>
+      
+      <canvas id="stickman" style="width:300px;height:200px;"
+        >This Text will show if the Browser does NOT support HTML5 Canvas
+        tag</canvas>
+    
+		<button onclick="init()">Reset</button> 
+	<button onclick="showWord();">Show Answer</button> 
+    </div>
+
+	
+    <script>
+
+
+function displayFanCount(){
+	
+	window.setInterval(function() {
+		
+		getSpecialFans(51919855);
+		}, 5000);
+	}
+
+	window.setInterval(function() {
+		  get_current_song();
+		;
+		}, 5000);
+
+</script>
+
+	<div id="countDown2" class='timercountdown'>
+	<script src="hangman.js"></script>
+	</div>	<script src="KeyPress.js"></script>
+
+	</div>
+	
+</body>
+	</html>

@@ -1,0 +1,146 @@
+<html>
+<title></title>
+
+<head>
+
+<script src="https://js.pusher.com/2.2/pusher.min.js"> </script> 
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="yn.js"></script>
+		<script src="KickChat.js"></script>
+	 <link rel="stylesheet" href="wheel.css" />
+<style>
+
+input,button,Button{
+  font-size:20px;
+  color:white;
+
+  
+  float:center;
+  border-radius: 12px;
+  background-color:green;
+  text-align:center;
+}
+.buttons2 {
+  background: purple;
+  border-radius: 5px;
+  border: solid 1px white;
+  color:white;
+	width:50px;
+	height:50px;
+ 
+  font-size:40px;
+  margin: 0 10px 10px 0;
+  outline: none;
+}
+.button2:hover {
+  transition: 0.5s;
+  background: white;
+  border: solid 1px white;
+  color: #c1d72e;
+}
+
+.selected {
+  background: white;
+  border: solid 1px white;
+  color: #c1d72e;
+}
+
+.special{
+
+
+	color:green;
+	wrap:auto;
+
+	padding-bottom :20px;
+
+
+  /* Center vertically and horizontally */
+	position: absolute;
+	top:10px;
+	left:0px;
+	margin: -25px 0 0 -25px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding:20px;
+
+	font-size:24px;
+	background-color:white;
+	border-radius:24px;
+	top:30px;
+	left:50%;
+
+	
+
+	
+  }
+
+</style>
+
+
+
+</head>
+
+
+<body>
+<script>
+//FetchEvent(2282276);
+//main(1667541);
+
+</script>
+
+
+<div style="position:absolute;right:20px;color:green; top:10%;padding:20px; width:500px; ;font-size:30px ;border: white solid 5px;border-style:inline; padding:20px; item-align:center;display:none;" id='hangmanDiv'>
+    <div class="wrapper" >
+
+      <div class="alphabetButton" id="alphabetButtons"></div>
+      <p id="categoryName"></p>
+      <div id="hold"></div>
+      <p id="mylives"></p>
+      
+      <canvas id="stickman" style="width:300px;height:200px;"
+        >This Text will show if the Browser does NOT support HTML5 Canvas
+        tag</canvas>
+    <div id="cardlist" style="visibility:hidden" class="special"></div>
+	<button onclick="init() ">Reset</button> 
+	
+	<button  onclick="showWord();">Show Answer</button> 
+	<button onclick="showWheel()">Spin</button>
+    </div>
+		<script src="hangman.js"></script>
+	
+	<script>
+			 init(); 
+			displayPopUp("hello world");
+		
+</script>
+<div></div>
+</div>
+
+		<div class="wrapper2" id="wrapper2" >
+      <div class="container" style="">
+        <canvas id="wheel" style=""></canvas>
+        <button id="spin-btn">Spin</button>
+        <img src="spinner-arrow-.svg" alt="spinner-arrow" />
+      </div>
+      <div id="final-value">
+   
+      </div>
+    </div>
+    <!-- Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <!-- Chart JS Plugin for displaying text over chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <!-- Script -->
+  
+	<script>
+		function showWheel(){
+			console.log("wheel has been clicked");
+			spinWheel("test");
+			
+			}
+	
+	</script>  
+	
+	<script src="wheel.js"></script>
+ </body>
+ </html>
