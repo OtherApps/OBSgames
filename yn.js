@@ -1,6 +1,6 @@
 
 
-//var fans = https://cdn.younow.com/php/api/channel/getInfo/channelId=51919855 
+
 
 // chat log below work
 var jsonInfoData =0;
